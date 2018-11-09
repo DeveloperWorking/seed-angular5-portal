@@ -1,0 +1,20 @@
+<app-spinner *ngIf="carregando"></app-spinner>
+<app-modal Titulo="{{ Modal.Titulo }}" Mensagem="{{ Modal.MensagemSucesso }}" (onSuccess)="Ok()" *ngIf="Modal.ShowMensagem"></app-modal>
+
+<!-- Redefinir Senha -->
+<div class="login opcoes-login fix-keyboardRecuperar">
+  <img src="assets/img/seed.png" alt="seed">
+  <div class="form-login">
+    <h2>Esqueci minha senha</h2>
+
+    <input type="email" placeholder="E-mail" [(ngModel)]="UserName" id="userName">
+
+    <button type="button" [routerLink]="['/login']">Voltar</button>
+    <button type="button" (click)="Redefinir()">Redefinir</button>
+    <div class="erros" *ngIf="errorMsg">
+      <p>{{ errorMsg }}</p>
+    </div>
+  </div>
+
+</div>
+<!-- /Redefinir Senha -->

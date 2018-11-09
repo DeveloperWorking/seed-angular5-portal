@@ -1,0 +1,357 @@
+/* CSS Document */
+
+/* Fonts */
+
+@font-face {
+  font-family: 'pt-sans';
+  src: url('../fonts/pt-sans.woff2') format('woff2'), url('../fonts/pt-sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt-sans-bold';
+  src: url('../fonts/pt-sans-bold.woff2') format('woff2'), url('../fonts/pt-sans-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* /Fonts */
+
+/* Body */
+
+body {
+  font-size: 14px;
+  font-family: 'pt-sans';
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  padding: 0;
+  margin: 0;
+  background-color: #373737;
+}
+
+/* /Body */
+
+h2 {
+  color: #fff;
+}
+
+/* Login */
+
+.login {
+  background-image: url(../img/textura.png);
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+  padding: 5em 3em 3em 3em;
+  text-align: center;
+}
+
+.login img {
+  max-width: 300px;
+}
+
+.login .form-login {
+  margin: 4em auto 0;
+  max-width: 500px;
+}
+
+.login .form-login h2 {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-family: 'pt-sans-bold';
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
+  font-weight: bold;
+}
+
+.login .form-login input[type=text],
+.login .form-login input[type=password],
+.login .form-login input[type=email] {
+  background: #ffffff;
+  border-radius: 50px;
+  border: 0;
+  padding: 1em 1.3em 0.6em 2.5em;
+  width: 100%;
+  outline: none;
+  font-family: 'pt-sans-bold';
+  font-size: 1em;
+  color: #373737;
+  margin-bottom: 1em;
+  transition: all .2s ease;
+  background-size: 1em auto;
+  background-position: 1em center;
+  background-repeat: no-repeat;
+}
+
+.login .form-login input[type=text],
+.login .form-login input[type=email] {
+  background-image: url(../img/pessoa.svg);
+}
+
+.login .form-login input[type=text],
+.login .form-login input[type=password] {
+  background-image: url(../img/cadeado.svg);
+}
+
+.login .form-login input[type=text]:focus,
+.login .form-login input[type=password]:focus,
+.login .form-login input[type=email]:focus {
+  background-color: #f4ebeb;
+}
+
+.login .form-login label {
+  font-size: 1em;
+  color: #fff;
+  display: block;
+  font-family: 'pt-sans-bold';
+}
+
+.login .form-login label input[type=checkbox] {
+  margin: 0 .3em 0 0;
+  position: relative;
+  top: 2px;
+}
+
+.login .form-login button {
+  font-family: 'pt-sans-bold';
+  font-size: 1.1em;
+  display: block;
+  margin: 1em auto;
+  border: 0;
+  color: #fff;
+  background-color: #373737;
+  border-radius: 40px;
+  padding: 0.8em 3em 0.5em;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.login .form-login a {
+  font-size: 1em;
+  color: #fff;
+  font-family: 'pt-sans-bold';
+  margin: 0 0.5em;
+}
+
+.login .form-login a:hover {
+  text-decoration: none;
+}
+
+.login .erros p {
+  color: #d40312;
+  font-family: 'pt-sans-bold';
+}
+
+.opcoes-login .form-login button {
+  display: inline-block;
+  width: 49%;
+  padding: 0.8em 0 0.5em;
+  text-align: center
+}
+
+/* /Login */
+
+/* Primeiro Acesso */
+
+.primeiro-acesso .form-login #nome {
+  background-image: url(../img/nome.svg);
+}
+
+.primeiro-acesso .form-login #email {
+  background-image: url(../img/email.svg);
+}
+
+.primeiro-acesso .form-login #cpf {
+  background-image: url(../img/cpf.svg);
+}
+
+.primeiro-acesso .form-login #telefone {
+  background-image: url(../img/telefone.svg);
+}
+
+/* /Primeiro Acesso */
+
+/* Carregadno */
+
+.carregando {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.carregando img {
+  margin-top: 15em;
+  width: 4em;
+  height: 4em;
+  animation: spin 1.5s ease infinite;
+}
+
+.carregando p {
+  color: #2a466c;
+  font-family: 'pt-sans-bold';
+}
+
+/* /Carregadno */
+
+/* Header */
+
+header {
+  background-image: url('../img/textura.png');
+  padding: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1em;
+}
+
+header span {
+  display: inline-block;
+  left: 0;
+}
+
+header a {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+header a img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+header span img {
+  max-width: 25px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+header span img:hover {
+  animation: spin 0.4s ease;
+}
+
+/* /Header */
+
+/* Footer */
+
+footer {
+  background-image: url('../img/textura.png');
+  padding: 1.2em 1.2em 0.8em 1.2em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul li {
+  display: inline-block;
+  text-align: center;
+}
+
+footer ul li a {
+  color: #fff;
+  font-family: 'pt-sans-bold';
+  font-size: 1em;
+}
+
+footer ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer ul li img {
+  width: auto;
+  height: 1.2em;
+  display: block;
+  margin: 0 auto 0.5em;
+}
+
+/* /Footer */
+
+/* Animações */
+
+@keyframes zoom {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+/* /Animações */
+
+/* Animações */
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+/* /Animações */
+
+/* Extra small devices (max 470px) */
+
+@media (max-width: 469.98px) {
+  header {
+    padding: 0.5em 1.2em;
+  }
+  header span img {
+    max-width: 20px;
+  }
+  footer {
+    padding: 0.5em 1.2em;
+  }
+  footer ul li img {
+    margin: 0 auto;
+  }
+  footer ul li a {
+    font-size: 0.7em;
+  }
+  .form span {
+    display: block;
+    margin: 0 0 0.7em 0.5em;
+  }
+}
+
+.stop-scroll {
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.start-scroll {
+  overflow-y: auto !important;
+  height: 100% !important;
+}

@@ -1,0 +1,26 @@
+<app-spinner *ngIf="carregando"></app-spinner>
+
+<!-- Login -->
+<div class="login fix-keyboardLogin">
+  <img src="assets/img/seed.png" alt="Seed">
+
+  <div class="form-login">
+    <h2>Login</h2>
+    <input type="email" placeholder="CPF ou Email" [(ngModel)]="loginModel.UserName" id="email">
+    <input type="password" placeholder="Senha" [(ngModel)]="loginModel.Password" id="senha">
+
+    <label>
+      <input type="checkbox" id="manterLogado">Manter conectado
+    </label>
+
+    <button type="button" class="entrar" (click)="login()">Entrar</button>
+    <a [routerLink]="['/primeiro-acesso']">Solicitar acesso</a>
+    <a [routerLink]="['/recuperar-senha']">Recuperar senha</a>
+  </div>
+
+  <div class="erros" *ngIf="errorMsg">
+    <p>{{ errorMsg }}</p>
+  </div>
+
+</div>
+<!-- /Login -->

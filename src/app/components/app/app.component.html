@@ -1,0 +1,28 @@
+<app-modal Titulo="{{ Modal.Titulo }}" Mensagem="{{ Modal.MensagemSucesso }}" *ngIf="Modal.ShowMensagem" (onSuccess)="Ok()"
+  ShowCancelar="{{ Modal.ShowCancelar }}" (onCancelar)="Cancelar()"></app-modal>
+
+<!-- Header -->
+<header *ngIf="isLogged">
+  <span>
+    <img src="assets/img/menu.svg" alt="Menu">
+  </span>
+  <a routerLinkActive="home" routerLink="home">
+    <h1>
+      <img src="assets/img/seed.png" alt="Seed">
+    </h1>
+  </a>
+  <span (click)="onLogout()">
+    <img src="assets/img/sair.svg" alt="Sair">
+  </span>
+</header>
+<!-- /Header -->
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Footer -->
+<footer *ngIf="isLogged">
+  <p>Foorter aqui</p>
+</footer>
+<!-- /Footer -->

@@ -1,0 +1,23 @@
+<app-spinner *ngIf="carregando"></app-spinner>
+<app-modal Titulo="{{ Modal.Titulo }}" Mensagem="{{ Modal.MensagemSucesso }}" *ngIf="Modal.ShowMensagem" (onSuccess)="Ok()"></app-modal>
+
+<!-- Solicitar Acesso -->
+<div class="login primeiro-acesso opcoes-login fix-keyboardSolicitar">
+  <img src="assets/img/seed.png" alt="seed">
+  <div class="form-login">
+    <h2>Solicitar acesso</h2>
+    <input type="text" placeholder="Nome" [(ngModel)]="SolicitarAcesso.Nome" id="nome">
+    <input type="email" placeholder="Email" [(ngModel)]="SolicitarAcesso.Email" id="email">
+    <input type="text" placeholder="CPF" [(ngModel)]="SolicitarAcesso.CPF" id="cpf">
+    
+    <input type="text" placeholder="Telefone" [(ngModel)]="SolicitarAcesso.Telefone" id="telefone">
+    <button type="button" [routerLink]="['/login']">Voltar</button>
+    <button type="button" (click)="Solicitar()">Solicitar</button>
+
+  </div>
+  <div class="erros" *ngIf="errorMsg">
+    <p>{{ errorMsg }}</p>
+  </div>
+
+</div>
+<!-- /Solicitar Acesso -->
